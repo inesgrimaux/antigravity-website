@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initLightbox();
     initMobileMenu();
+    initSlideshow();
 });
 
 function initMobileMenu() {
@@ -174,4 +175,18 @@ if (backToTopBtn) {
             });
         }
     });
+}
+
+// Hero Slideshow Logic
+function initSlideshow() {
+    const slides = document.querySelectorAll('#heroSlideshow .slide');
+    if (slides.length === 0) return;
+
+    let currentSlide = 0;
+    
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 5000); // 5 seconds interval
 }
