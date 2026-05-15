@@ -156,9 +156,22 @@ if (backToTopBtn) {
 
     backToTopBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        const jumpLinks = document.querySelector('.jump-links');
+        if (jumpLinks) {
+            // Scroll to the jump links menu with an offset
+            const offset = 80;
+            const elementPosition = jumpLinks.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        } else {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     });
 }
