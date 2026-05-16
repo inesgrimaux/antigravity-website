@@ -32,6 +32,7 @@
     <meta name="description" content="Photography series by contemporary artist Ines Grimaux.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="https://inesgrimaux.com/inesgrimaux.ico" type="image/x-icon">
+    <script src="../js/i18n.js"></script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -55,21 +56,29 @@
             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html" data-i18n="nav_home">Home</a></li>
                     
                     <li style="margin-bottom: 0;">
-                        <span class="nav-label">Artwork Series</span>
+                        <span class="nav-label" data-i18n="nav_artwork">Artwork Series</span>
                         <ul class="sub-nav">
-                        <li><a href="photography.html" class="active">/ photography</a></li>
-                        <li><a href="paintings.html">/ paintings</a></li>
-                        <li><a href="sculptures.html">/ sculptures</a></li>
+                        <li><a href="photography.html" class="active" data-i18n="nav_photography">/ photography</a></li>
+                        <li><a href="paintings.html" data-i18n="nav_paintings">/ paintings</a></li>
+                        <li><a href="sculptures.html" data-i18n="nav_sculptures">/ sculptures</a></li>
                         </ul>
                     </li>
                     
-                    <li style="margin-top:30px;"><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
+                    <li style="margin-top:30px;"><a href="../about.html" data-i18n="nav_about">About</a></li>
+                    <li><a href="../contact.html" data-i18n="nav_contact">Contact</a></li>
                 </ul>
             </nav>
+
+            <div class="lang-switcher">
+                <a onclick="i18n.setLanguage('en')">EN</a>
+                <span>|</span>
+                <a onclick="i18n.setLanguage('es')">ES</a>
+                <span>|</span>
+                <a onclick="i18n.setLanguage('pt')">PT</a>
+            </div>
 
             <div class="footer-nav">
                 <p>&copy; 2026 INES GRIMAUX</p>
@@ -84,9 +93,9 @@
 
             <div class="series-info">
                 <p class="series-years">2014 - 2026</p>
-                <h2 class="series-title">Photography</h2>
+                <h2 class="series-title" data-i18n="series_photography_title">Photography</h2>
                 <div class="series-description">
-                    <p>
+                    <p data-i18n="series_photography_desc">
                         A comprehensive look at Ines Grimaux's photographic work, ranging from the contemplative <em>River Series</em> to the activist-driven performance documentation of <em>Siren Jones</em>.
                     </p>
                 </div>
@@ -106,7 +115,7 @@
             <!-- River Series Section -->
             <div class="series-info" id="river-series" style="margin-bottom: 30px;">
                 <h3 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; font-style: italic;">River Series</h3>
-                <p class="curatorial-text">A contemplative visual study exploring the fluid dynamics and ephemeral nature of water environments.</p>
+                <p class="curatorial-text" data-i18n="river_series_desc">Un estudio visual profundo donde la Artista investiga la dinámica fluida y la naturaleza efímera de los entornos acuáticos. A través de una mirada minimalista, Grimaux despoja al paisaje de su literalidad para centrarse en la textura de la luz y el rastro invisible del movimiento.</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" data-title="River Whisper I" data-technique="Photography" data-size="Various" data-year="2016" data-more="https://www.instagram.com/inesgrimaux/">
@@ -436,7 +445,7 @@
             <!-- Siren Jones Section -->
             <div class="series-info" id="siren-jones" style="margin-top: 60px; margin-bottom: 30px;">
                 <h3 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; font-style: italic;">Siren Jones</h3>
-                <p class="curatorial-text">Performance documentation of Elizabeth Doud's activist character exploring climate change. Featured in international publications (Miami).</p>
+                <p class="curatorial-text" data-i18n="siren_jones_desc">En esta serie, la Artista captura la potencia performática de Elizabeth Doud a través de su personaje activista "Siren Jones". La fotografía de Inés Grimaux no actúa meramente como registro documental, sino que eleva la urgencia del mensaje ambiental a una dimensión estética contemplativa. Esta colaboración ha sido reconocida internacionalmente y destacada en publicaciones especializadas (American Theatre, Miami), consolidándose como una referencia en la intersección entre arte, ecología y performance.</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" data-title="The Mermaid Tear Factory - Elizabeth Doud" data-technique="Performance Photography" data-size="Various" data-year="2018" data-more="https://www.americantheatre.org/2020/02/18/digging-for-new-roots/">

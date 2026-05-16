@@ -33,6 +33,7 @@
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="https://inesgrimaux.com/inesgrimaux.ico" type="image/x-icon">
+    <script src="js/i18n.js"></script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -56,21 +57,29 @@
             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
                     
                     <li style="margin-bottom: 0;">
-                        <span class="nav-label">Artwork Series</span>
+                        <span class="nav-label" data-i18n="nav_artwork">Artwork Series</span>
                         <ul class="sub-nav">
-                            <li><a href="series/photography.html">/ photography</a></li>
-                            <li><a href="series/paintings.html">/ paintings</a></li>
-                            <li><a href="series/sculptures.html">/ sculptures</a></li>
+                            <li><a href="series/photography.html" data-i18n="nav_photography">/ photography</a></li>
+                            <li><a href="series/paintings.html" data-i18n="nav_paintings">/ paintings</a></li>
+                            <li><a href="series/sculptures.html" data-i18n="nav_sculptures">/ sculptures</a></li>
                         </ul>
                     </li>
                     
-                    <li style="margin-top:30px;"><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li style="margin-top:30px;"><a href="about.html" data-i18n="nav_about">About</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
                 </ul>
             </nav>
+
+            <div class="lang-switcher">
+                <a onclick="i18n.setLanguage('en')">EN</a>
+                <span>|</span>
+                <a onclick="i18n.setLanguage('es')">ES</a>
+                <span>|</span>
+                <a onclick="i18n.setLanguage('pt')">PT</a>
+            </div>
 
             <div class="footer-nav">
                 <p>&copy; 2026 INES GRIMAUX</p>

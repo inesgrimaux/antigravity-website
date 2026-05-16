@@ -136,6 +136,31 @@ nav.main-nav ul li a.active {
     letter-spacing: 1px;
 }
 
+/* Language Switcher */
+.lang-switcher {
+    margin-top: 20px;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.lang-switcher a {
+    text-decoration: none;
+    color: #999;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.lang-switcher a:hover,
+.lang-switcher a.active {
+    color: #000;
+}
+
+.lang-switcher span {
+    margin: 0 5px;
+    color: #eee;
+}
+
 /* Hamburger Menu (Mobile Only) */
 .hamburger-btn {
     display: none;
