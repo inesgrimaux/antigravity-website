@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://inesgrimaux.com/sitemap.xml
