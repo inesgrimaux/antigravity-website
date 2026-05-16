@@ -25,16 +25,16 @@
     <title>Ines Grimaux | artist portfolio</title>
     <meta name="description" content="Portfolio of contemporary artist Ines Grimaux. Photography, Sculpture, Drawing, and Cultural Management.">
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-56PGJZHS');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Preconnect & Fonts (non-render-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@300;400&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Preload hero image for LCP -->
+    <link rel="preload" as="image" href="IMAGENS/photography/siren_jones/Siren Jones - Mar Grande - Ines Grimaux (2).jpg">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="https://inesgrimaux.com/inesgrimaux.ico" type="image/x-icon">
     <script src="js/i18n.js" defer></script>
@@ -115,6 +115,19 @@
     </div>
 
     <script src="js/script.js" defer></script>
+    <!-- GTM deferred to after page load for performance -->
+    <script>
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            var s = document.createElement('script');
+            s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-56PGJZHS';
+            s.async = true;
+            document.head.appendChild(s);
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        }, 2000);
+    });
+    </script>
 </body>
 </html>
 
